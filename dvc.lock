@@ -85,12 +85,12 @@ stages:
       size: 2177
     params:
       params.yaml:
-        train.n_neighbors: 13
+        train.n_neighbors: 12
         train.weights: distance
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: 8ae826c0a40b04f2752a6de0cfbd1786
+      md5: b7b4c15783d2d60e1ff77978721de457
       size: 787391
   evaluate:
     cmd: python3 scripts/model_scripts/evaluate.py data/stage4/test.csv models/model.pkl
@@ -101,7 +101,7 @@ stages:
       size: 70699
     - path: models/model.pkl
       hash: md5
-      md5: 8ae826c0a40b04f2752a6de0cfbd1786
+      md5: b7b4c15783d2d60e1ff77978721de457
       size: 787391
     - path: scripts/model_scripts/evaluate.py
       hash: md5
